@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
-  final String texto;
+  final String textAnsewrs;
   final void Function() onPressed;
 
-  Answer(this.texto, this.onPressed);
+  const Answer({
+    Key? key,
+    required this.textAnsewrs,
+    required this.onPressed,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: TextButton(
         style: TextButton.styleFrom(
@@ -16,7 +20,7 @@ class Answer extends StatelessWidget {
           primary: Colors.black,
         ),
         onPressed: onPressed,
-        child: Text(texto),
+        child: Text(textAnsewrs),
       ),
     );
   }
