@@ -17,7 +17,7 @@ class Answer extends StatelessWidget {
       child: TextButton(
         style: TextButton.styleFrom(
           backgroundColor: Colors.blue,
-          primary: Colors.black,
+          primary: Colors.white,
         ),
         onPressed: onPressed,
         child: Text(textAnsewrs),
